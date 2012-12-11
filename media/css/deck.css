@@ -1,7 +1,6 @@
-.alternate-background {
-    background-color: black;
-}
-
-.video-demo {
-    background-image: url('/static/images/10-VideoDemo.jpg');
+#video-demo {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 100%;
 }

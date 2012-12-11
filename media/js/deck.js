@@ -14,6 +14,7 @@ preload([
         'deck/Trend.jpg',
         'deck/GoToMarket1.jpg',
         'deck/GoToMarket2.jpg',
+        'deck/VideoDemo.jpg',
         'deck/AndMore1.jpg',
         'deck/AndMore2.jpg',
         'deck/Revenue.jpg',

@@ -7,9 +7,6 @@
 
 	<title>Jackalope</title>
 
-	<!-- Our stylesheet -->
-	<link rel="stylesheet" href="/static/css/deck.css">
-
 	<!-- Required stylesheet -->
 	<link rel="stylesheet" href="/static/lib/deckjs/core/deck.core.css">
 
@@ -18,9 +15,9 @@
 	<link rel="stylesheet" href="/static/lib/deckjs/extensions/navigation/deck.navigation.css">
 	<link rel="stylesheet" href="/static/lib/deckjs/extensions/scale/deck.scale.css">
 	<!--
+	<link rel="stylesheet" href="/static/lib/deckjs/extensions/hash/deck.hash.css">
 	<link rel="stylesheet" href="/static/lib/deckjs/extensions/status/deck.status.css">
 	<link rel="stylesheet" href="/static/lib/deckjs/extensions/goto/deck.goto.css">
-	<link rel="stylesheet" href="/static/lib/deckjs/extensions/hash/deck.hash.css">
     -->
 
 	<!-- Style theme. More available in /themes/style/ or create your own. -->
@@ -31,13 +28,17 @@
 	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
 	<link rel="stylesheet" href="/static/lib/deckjs/themes/transition/fade.css">
 
+	<!-- Our stylesheet -->
+	<link rel="stylesheet" href="/static/css/deck.css">
+
 	<!-- Required Modernizr file -->
     <script src="/static/lib/modernizr/modernizr.custom.js"></script>
 
+	<!-- Our javascript -->
     <script src="/static/js/deck.js"></script>
 </head>
 
-<body class="deck-container deck-next-link">
+<body class="deck-container">
 
 <!-- Begin slides. Just make elements with a class of slide. -->
 
@@ -88,30 +89,65 @@
 </section>
 
 <!-- SLIDE #10 -->
-<section class="slide alternate-background">
-    <!--
-    <a
-        href="http://fast.wistia.com/embed/iframe/tst16o3mil?autoPlay=true&controlsVisibleOnLoad=true&popover=true&version=v1&videoHeight=900&videoWidth=1440&volumeControl=true"
-        class="wistia-popover[height=900,width=1440]">
-        <img
-            src="http://embed-0.wistia.com/deliveries/105cb352bb16a3e43161c40028ff6cdbdb2462d0.jpg?image_play_button=true&image_crop_resized=150x94"
-            alt="" />
-    </a>
-    <script charset="ISO-8859-1"
-            src="http://fast.wistia.com/static/popover-v1.js">
-    </script>
-    -->
+<section class="slide">
+    <img src="/static/images/deck/VideoDemo.jpg" alt="Go to Market" />
 
-    <iframe 
-        src="http://fast.wistia.com/embed/iframe/tst16o3mil?controlsVisibleOnLoad=true&version=v1&videoHeight=900&videoWidth=1440&volumeControl=true"
-        allowtransparency="true"
-        frameborder="0"
-        scrolling="no"
-        class="wistia_embed"
-        name="wistia_embed"
-        width="1024"
-        height="640">
-    </iframe>
+    <div id="video-demo">
+
+        <!-- POPOVER -->
+        <!--
+        <a
+            href="http://fast.wistia.com/embed/iframe/tst16o3mil?autoPlay=true&controlsVisibleOnLoad=true&popover=true&version=v1&videoHeight=640&videoWidth=1024&volumeControl=true"
+            class="wistia-popover[height=640,width=1024]">
+
+            <img
+                src="http://embed-0.wistia.com/deliveries/105cb352bb16a3e43161c40028ff6cdbdb2462d0.jpg?image_play_button=true&image_crop_resized=512x320"
+                alt="" />
+
+        </a>
+        <script
+            charset="ISO-8859-1"
+            src="http://fast.wistia.com/static/popover-v1.js">
+        </script>
+        -->
+
+        <!-- EMBEDDED IFRAME -->
+        <iframe 
+            src="http://fast.wistia.com/embed/iframe/tst16o3mil?endVideoBehavior=reset&version=v1&videoHeight=640&videoWidth=1024&volumeControl=true"
+            allowtransparency="true"
+            frameborder="0"
+            scrolling="no"
+            class="wistia_embed"
+            name="wistia_embed"
+            width="1024"
+            height="640">
+        </iframe>
+
+        <!-- EMBEDDED API CALL -->
+        <!--
+        <div
+            id="wistia_tst16o3mil"
+            class="wistia_embed"
+            style="width:1024px;height:640px;"
+            data-video-width="1024"
+            data-video-height="640">&nbsp;
+        </div>
+        <script
+            charset="ISO-8859-1"
+            src="http://fast.wistia.com/static/concat/E-v1.js">
+        </script>
+        <script>
+wistiaEmbed = Wistia.embed("tst16o3mil", {
+    version: "v1",
+    videoWidth: 1024,
+    videoHeight: 640,
+    volumeControl: true,
+    controlsVisibleOnLoad: true
+});
+        </script>
+        -->
+
+    </div>
 </section>
 
 <!-- SLIDE #11 -->
@@ -180,9 +216,9 @@
 <script src="/static/lib/deckjs/extensions/navigation/deck.navigation.js"></script>
 <script src="/static/lib/deckjs/extensions/scale/deck.scale.js"></script>
 <!--
+<script src="/static/lib/deckjs/extensions/hash/deck.hash.js"></script>
 <script src="/static/lib/deckjs/extensions/status/deck.status.js"></script>
 <script src="/static/lib/deckjs/extensions/goto/deck.goto.js"></script>
-<script src="/static/lib/deckjs/extensions/hash/deck.hash.js"></script>
 -->
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
@@ -191,5 +227,6 @@
 		$.deck('.slide');
 	});
 </script>
+
 </body>
 </html>
